@@ -1,0 +1,66 @@
+ .box{
+     width: 30%;
+  margin: 150px auto;
+  border-radius: 25px;
+  border: 2px ;
+  background:transparent !important ;
+  padding:50px;
+  box-shadow: 5px 10px 18px #888888; 
+   }   
+.in{
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  background: transparent!important;
+  border-width: 0 0 1px;
+  border-color: white;
+  color:white;
+ }
+  .ppp{
+  background-color:white;
+  color:black;
+  padding: 15px 20px!important;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 15px;
+}
+.in-container{
+   display: flex;
+  width: 100%;
+  margin-bottom: 6px;
+  
+  background: transparent!important;
+}
+.icon {
+  padding: 5px;
+   font-size:50px;
+  color: white;
+  background: transparent!important;
+  min-width: 30px;
+  text-align: center;
+}
+a, u {
+    text-decoration: none;
+    color:white;
+}
+.fa-user:before {
+    content: "\f007";
+    font-size: 26px;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.fa-key:before {
+    content: "\f084";
+    font-size: 26px;
+    text-shadow: 1px 1px 1px #ccc
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity:0.5; /* Firefox */
+}
+
+
+
+
+
+
