@@ -1,0 +1,95 @@
+Simple applications using JSP and AJAX
+
+AJAX:
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajaxinfo.txt", true);
+  xhttp.send();
+}
+</script>
+
+[File ajaxinfo.txt]
+<h4>Event Month</h4>
+<p>Jan-April</p>
+<p>Tech Park,UB,Library</p>
+<p>Come and enjoy this wonderful tech event</p>
+
+
+
+.......................................
+JSP:
+<%
+   String str = request.getParameter("r1");
+   int num1;
+   int num2;
+   int tot=0;
+     num1 = Integer.parseInt(request.getParameter("num1"));
+     num2 = Integer.parseInt(request.getParameter("num2"));
+        if ("add".equals(str))
+        {
+            tot = num1 + num2;
+        }
+        else  if ("min".equals(str))
+        {
+            tot = num1 - num2;
+        }
+         else  if ("sub".equals(str))
+        {
+            tot = num1 * num2;
+        }
+        else  if ("div".equals(str))
+        {
+            tot = num1 / num2;
+        }
+        Integer result = new  Integer(tot);
+        out.println(result.toString());    
+%>
+
+
+
+<html>
+    <head>
+        <title>Calculator</title>
+        
+        
+    </head>
+    <body>
+        <form action="Add.jsp" method="POST">
+        <table cellpadding ="10" cellspacing="10">
+            <tr>
+                <td> <input type="radio"  name="r1" id="add" value="add" > +</td> 
+               
+            </tr>
+             <tr>
+            <td> <input type="radio"  name="r1" id="min"  value="min" > -</td>
+
+            </tr>
+             <tr>
+            <td> <input type="radio" name="r1" id="sub"  value="sub" > *</td>
+            </tr>
+             <tr>
+            <td> <input type="radio" name="r1" id="div" value="div" > /</td>
+            </tr>
+             <tr>
+              <td> Num1 </td>   
+              <td> <input type="text" name="num1" id="num1" > </td>
+            </tr>
+             <tr>
+            <td> Num2 </td>   
+            <td> <input type="text" name="num2" id="num2" > </td>
+            </tr>
+        <tr>          
+            <td> <input type="submit" value="Ok" > </td>
+            </tr>
+        </table>
+     </form>   
+    </body>
+  
+</html>

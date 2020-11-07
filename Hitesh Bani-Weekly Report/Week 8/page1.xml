@@ -1,0 +1,15 @@
+/*
+Design simple application for accessing the data
+using XML
+*/
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="Rule.css"?> 
+<!DOCTYPE note SYSTEM "note.dtd">
+<note>
+<to>Hitesh</to>
+<from>Bani</from>
+<heading>Welcome</heading>
+<body>to mindgames</body>
+</note>
